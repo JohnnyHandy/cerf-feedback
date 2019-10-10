@@ -6,17 +6,24 @@ import Choice from './components/choice/choice'
 import Questions from './components/questions/questions'
 
 function App() {
-  const [test,setTest] = useState('0')
-  // const content = test === '0' ? <Landing setTest = {(data)=>{
-  //   console.log(data)
-  //   setTest(data)
-  //   }} /> : test === '1' ? <Login/> : null 
+  const [stage,setStage] = useState('0')
+  const [test,setTest] = useState(null)
+  const [login,setLogin] = useState(null)
+  const component = stage == '0' ? <Landing 
+    setStage={(stage)=>setStage(stage)} 
+    setTest={(test)=>setTest(test)}/> :
+  stage =='1' ? <Login 
+    setStage={(stage)=>setStage(stage)}
+    setLogin={(login=>setLogin(login))}/> :
+  stage =='2' ? <Choice/> :
+  stage =='3' ? <Questions/> :
+  null 
   return (
     <div className="App">
       <header className="App-header">
         <img src='https://i.imgur.com/gQC4wPM.png' className="App-logo" alt="logo" />
         <div className='title'>Sistema de Feedback Interno</div>
-        <Questions/>
+        {component}
       </header>
       
     </div>
