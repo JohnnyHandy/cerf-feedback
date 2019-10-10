@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import axios from '../../axios'
 
 import './questions.css'
 
@@ -10,6 +11,13 @@ const Questions = (props)=>{
         const copy = question === 0 ? {...results,lideranca:grade} : question === 1 ? {...results,comunicacao:grade} : question === 2 ? {...results,adaptabilidade:grade} :null
         await setResults(copy)
         await setQuestion(question+1)
+    }
+    function postRequest(){
+        axios.post('/results.json',results).then(response=>{
+            console.log(response)
+        }).catch(error=>{
+            console.log(error)
+        })
     }
     return(
         <div className='questions-container'>
@@ -27,9 +35,7 @@ const Questions = (props)=>{
                 <div className='fourth'onClick={()=>setResults(4)}>4</div>
                 <div className='fifth'onClick={()=>setResults(5)}>5</div>
             </div>:null}
-             {question > 2 ?<div className='theme'>{props.user}, obrigado por dar seu feedback a {props.choice}! <br/> Deseja dar seu feedback a outro diretor?</div>:null}
-            
-            
+             {question > 2 ?<div onClick={()=>postRequest()} className='theme'>{props.user}, obrigado por dar seu feedback a {props.choice}! <br/> Deseja dar seu feedback a outro diretor?</div>:null}
         </div>
     )
 }

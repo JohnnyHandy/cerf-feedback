@@ -40,7 +40,8 @@ function App() {
    return array.name !== login
       }))
   }
-  const component = stage === '0' ? <Landing 
+  const component = 
+  stage === '0' ? <Landing 
     setStage={(stage)=>setStage(stage)} 
     setTest={(test)=>setTest(test)}/> :
   stage ==='1' ? <Login 
