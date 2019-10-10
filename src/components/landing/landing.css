@@ -1,0 +1,39 @@
+.options-container{
+    align-items:center;
+    justify-content: center;
+    height:135px;
+    width:305px;
+    position:relative;
+    margin-top:60px
+  }
+  
+.options-container .option1{
+    background-color:white;
+    cursor:pointer;
+    font-family: 'Montserrat','sans-serif';
+    font-size:16px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    color:#172F64;
+    position:absolute;
+    top:0;
+    width:100%; 
+  }
+  
+.options-container .option2{
+    background-color:white;
+    cursor:pointer;
+    font-family: 'Montserrat','sans-serif';
+    font-size:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    color:#172F64;
+    position:absolute;
+    bottom:0;
+    width:100%
+     
+  }

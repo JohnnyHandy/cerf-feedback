@@ -1,0 +1,65 @@
+.choice-container{
+    width:305px;
+    height:340px;
+    margin-top:25px;
+    background-color:white;
+}
+
+.flexbox-container{
+    margin-top:10px;
+    display:flex;
+    position:relative;
+    width:100%;
+   height:85px;
+   justify-content: center;
+   align-items: center;
+}
+
+.flexbox-container .img{
+    position:absolute;
+}
+
+.choice-container .title{
+    font-family: 'Montserrat','sans-serif';
+    font-size:17px;
+    color:#172F64
+}
+
+.flexbox-container2{
+    margin-top:5px;
+    display:flex;
+    position:relative;
+    width:100%;
+   height:85px;
+   justify-content: center;
+   align-items: center;
+}
+
+.flexbox-container2 .geraldo{
+    position:absolute;
+    left:10px;
+}
+
+.flexbox-container2 .izabel{
+    position:absolute;
+    right:10px;
+}
+
+.flexbox-container3{
+    display:flex;
+    position:relative;
+    width:100%;
+   height:85px;
+   justify-content: center;
+   align-items: center;
+}
+
+.flexbox-container3 .pedro{
+    position:absolute;
+    left:10px
+}
+
+.flexbox-container3 .ramon{
+    position:absolute;
+    right:10px
+}
