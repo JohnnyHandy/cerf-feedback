@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import './App.css';
 import Landing from './components/landing/landing'
 import Login from './components/login/login'
@@ -34,18 +34,19 @@ function App() {
       if(i.name===login){
         return setLoginPic(i.url)
       }
+      return null
     })
     setData(data.filter((array)=>{
    return array.name !== login
       }))
   }
-  const component = stage == '0' ? <Landing 
+  const component = stage === '0' ? <Landing 
     setStage={(stage)=>setStage(stage)} 
     setTest={(test)=>setTest(test)}/> :
-  stage =='1' ? <Login 
+  stage ==='1' ? <Login 
     setStage={(stage)=>setStage(stage)}
     setLogin={(login=>checkArray(login))}/> :
-  stage =='2' ? <Choice
+  stage ==='2' ? <Choice
     user={login}
     userPic={loginPic}
     data={data}
@@ -56,7 +57,7 @@ function App() {
         return i.name === choice ? setChoicePic(i.url):null
       })
     }}/> :
-  stage =='3' ? <Questions
+  stage ==='3' ? <Questions
     user={login}
     userPic={loginPic}
     choice={choice}

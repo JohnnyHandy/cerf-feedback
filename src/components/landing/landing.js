@@ -5,7 +5,6 @@ const landing = (props)=>{
   function handle(stage,test){
     props.setStage(stage)
     props.setTest(test)
-    console.log(stage,test)
   }
     return(
     <div className='options-container'>

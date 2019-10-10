@@ -9,10 +9,10 @@ const choice = (props)=>{
     }
     
     let firstRow = props.data.map((i,index)=>{
-        return index < 2 ? (<div key={index} className={ index==0 ?'choice-1' : index==1?'choice-2':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===0?'First Choice':index==='1'?'Second Choice': null}/></div>) : null
+        return index < 2 ? (<div key={index} className={ index===0 ?'choice-1' : index===1?'choice-2':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===0?'First Choice':index==='1'?'Second Choice': 'alt text'}/></div>) : null
     })
     let secondRow = props.data.map((i,index)=>{
-        return index < 4 && index >1? (<div key={index} className={ index==2 ?'choice-3' : index==3?'choice-4':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===2?'Third Choice':index===3?'Fourth Choice' : null}/></div>) : null
+        return index < 4 && index >1? (<div key={index} className={ index===2 ?'choice-3' : index===3?'choice-4':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===2?'Third Choice':index===3?'Fourth Choice' : 'alt text'}/></div>) : null
 
     })
     return(
