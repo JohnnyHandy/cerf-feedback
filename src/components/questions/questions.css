@@ -15,11 +15,11 @@
    align-items: center;
 }
 
-.flexbox-container .fred{
+.flexbox-container .login{
     position:absolute;
     left:10px
 }
-.flexbox-container .izabel{
+.flexbox-container .choice{
     position:absolute;
     right:10px
 }

@@ -11,15 +11,15 @@ const login =(props)=> {
             <div className='title1'>Feedback Entre os Diretores</div>
             <div className='title2'>Login</div>
             <div className='flex-container1'>
-                <div className='fred' onClick={()=>handle('2','fred')}><img src='https://i.imgur.com/B7eASOZ.png' alt='fred'/></div>
-                <div className='geraldo' onClick={()=>handle('2','geraldo')}><img src='https://i.imgur.com/YPEVOGu.png' alt='geraldo'/></div>
+                <div className='fred' onClick={()=>handle('2','Fred')}><img src='https://i.imgur.com/B7eASOZ.png' alt='fred'/></div>
+                <div className='geraldo' onClick={()=>handle('2','Geraldo')}><img src='https://i.imgur.com/YPEVOGu.png' alt='geraldo'/></div>
             </div>
             <div className='flex-container2'>
-                <div className='izabel' onClick={()=>handle('2','izabel')}><img src ='https://i.imgur.com/a3tbUyJ.png' alt='izabel'/></div>
+                <div className='izabel' onClick={()=>handle('2','Izabel')}><img src ='https://i.imgur.com/a3tbUyJ.png' alt='izabel'/></div>
             </div>
             <div className='flex-container3'>
-                <div className='pedro' onClick={()=>handle('2','pedro')}><img src='https://i.imgur.com/MIofgxK.png' alt='pedro'/></div>
-                <div className='ramon' onClick={()=>handle('2','ramon')}><img src='https://i.imgur.com/nWNbSkX.png' alt='ramon'/></div>
+                <div className='pedro' onClick={()=>handle('2','Pedro')}><img src='https://i.imgur.com/MIofgxK.png' alt='pedro'/></div>
+                <div className='ramon' onClick={()=>handle('2','Ramon')}><img src='https://i.imgur.com/nWNbSkX.png' alt='ramon'/></div>
             </div>
         </div>
     )

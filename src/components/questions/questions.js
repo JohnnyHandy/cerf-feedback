@@ -2,15 +2,15 @@ import React from 'react'
 
 import './questions.css'
 
-const questions = ()=>{
+const questions = (props)=>{
     return(
         <div className='questions-container'>
             <div className='flexbox-container'>
-                <div className='fred'><img src='https://i.imgur.com/B7eASOZ.png' alt='fred'/></div>
+                <div className='login'><img src={props.userPic} alt={props.user}/></div>
                 <div><img src='https://i.imgur.com/fULdqVv.png' alt='arrows'/></div>
-                <div className='izabel'><img src='https://i.imgur.com/a3tbUyJ.png' alt='izabel'/></div>
+                <div className='choice'><img src={props.choicePic} alt={props.choice}/></div>
             </div>
-            <div className='title'>Dê seu feedback para Izabel! <br/> De 1 a 5, como você avalia Izabel no que diz respeito à:</div>
+            <div className='title'>Dê seu feedback para Izabel! <br/> De 1 a 5, como você avalia {props.choice} no que diz respeito à:</div>
             <div className='theme'>Negociação</div>
             <div className='flexbox-container2'>
                 <div className='first'>1</div>

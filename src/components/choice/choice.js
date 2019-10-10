@@ -3,23 +3,33 @@ import React from 'react'
 import './choice.css'
 
 const choice = (props)=>{
+    function handle(stage,choice){
+        props.setStage(stage)
+        props.setChoice(choice)
+    }
+    
+    let firstRow = props.data.map((i,index)=>{
+        return index < 2 ? (<div key={index} className={ index==0 ?'choice-1' : index==1?'choice-2':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===0?'First Choice':index==='1'?'Second Choice': null}/></div>) : null
+    })
+    let secondRow = props.data.map((i,index)=>{
+        return index < 4 && index >1? (<div key={index} className={ index==2 ?'choice-3' : index==3?'choice-4':null}  onClick={()=>handle('3',i.name)}><img src={i.url} alt={index===2?'Third Choice':index===3?'Fourth Choice' : null}/></div>) : null
+
+    })
     return(
         <div className='choice-container'>
             <div className='flexbox-container'>
-                <div className='img'><img src='https://i.imgur.com/B7eASOZ.png' alt='fred'/></div>
+                <div className='img'><img src={props.userPic} alt={props.user}/></div>
             </div>
             <div className='title'>
-                Fred, seja bem vindo ao feedback entre os diretores! 
+                {props.user}, seja bem vindo ao feedback entre os diretores! 
                 <br/>
                 Quem você deseja avaliar?
             </div>
-            <div className='flexbox-container2'>
-                <div className='geraldo'><img src='https://i.imgur.com/YPEVOGu.png' alt='geraldo'/></div>
-                <div className='izabel'><img src='https://i.imgur.com/a3tbUyJ.png' alt='izabel'/></div>
+            <div className='flexbox-container-2'>
+                {firstRow}
             </div>
-            <div className='flexbox-container3'>
-                <div className='pedro'><img src='https://i.imgur.com/MIofgxK.png' alt='fred'/></div>
-                <div className='ramon'><img src='https://i.imgur.com/nWNbSkX.png' alt='ramon'/></div>
+            <div className='flexbox-container-3'>
+                {secondRow}
             </div>
         </div>
     )

@@ -25,7 +25,7 @@
     color:#172F64
 }
 
-.flexbox-container2{
+.flexbox-container-2{
     margin-top:5px;
     display:flex;
     position:relative;
@@ -35,17 +35,17 @@
    align-items: center;
 }
 
-.flexbox-container2 .geraldo{
+.flexbox-container-2 .choice-1{
     position:absolute;
     left:10px;
 }
 
-.flexbox-container2 .izabel{
+.flexbox-container-2 .choice-2{
     position:absolute;
     right:10px;
 }
 
-.flexbox-container3{
+.flexbox-container-3{
     display:flex;
     position:relative;
     width:100%;
@@ -54,12 +54,12 @@
    align-items: center;
 }
 
-.flexbox-container3 .pedro{
+.flexbox-container-3 .choice-3{
     position:absolute;
     left:10px
 }
 
-.flexbox-container3 .ramon{
+.flexbox-container-3 .choice-4{
     position:absolute;
     right:10px
 }
