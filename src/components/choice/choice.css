@@ -1,7 +1,7 @@
 .choice-container{
     width:305px;
-    height:340px;
-    margin-top:25px;
+    height:360px;
+    margin-top:5px;
     background-color:white;
 }
 
@@ -19,13 +19,18 @@
     position:absolute;
 }
 
+.flexbox-container .arrow{
+    position:absolute;
+    left:5px
+}
+
 .choice-container .title{
     font-family: 'Montserrat','sans-serif';
     font-size:17px;
     color:#172F64
 }
 
-.flexbox-container-2{
+.choice-container .flexbox-container-2{
     margin-top:5px;
     display:flex;
     position:relative;

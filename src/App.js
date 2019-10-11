@@ -4,6 +4,25 @@ import Landing from './components/landing/landing'
 import Login from './components/login/login'
 import Choice from './components/choice/choice'
 import Questions from './components/questions/questions'
+import Results from './components/results/results'
+
+const directorsData = [
+  {
+  name:'Fred',
+  url:'https://i.imgur.com/B7eASOZ.png'
+},{
+  name:'Geraldo',
+  url:'https://i.imgur.com/YPEVOGu.png'
+},{
+  name:'Izabel',
+  url:'https://i.imgur.com/a3tbUyJ.png'
+},{
+  name:'Pedro',
+  url:'https://i.imgur.com/MIofgxK.png'
+},{
+  name:'Ramon',
+  url:'https://i.imgur.com/nWNbSkX.png'
+}]
 
 function App() {
   const [stage,setStage] = useState('0');
@@ -12,22 +31,7 @@ function App() {
   const [loginPic,setLoginPic] = useState(null)
   const [choice,setChoice]=useState(null);
   const [choicePic,setChoicePic]=useState(null)
-  const [data,setData]=useState([{
-    name:'Fred',
-    url:'https://i.imgur.com/B7eASOZ.png'
-  },{
-    name:'Geraldo',
-    url:'https://i.imgur.com/YPEVOGu.png'
-  },{
-    name:'Izabel',
-    url:'https://i.imgur.com/a3tbUyJ.png'
-  },{
-    name:'Pedro',
-    url:'https://i.imgur.com/MIofgxK.png'
-  },{
-    name:'Ramon',
-    url:'https://i.imgur.com/nWNbSkX.png'
-  }])
+  const [data,setData]=useState(directorsData)
   function checkArray(login){
     setLogin(login)
     data.map((i)=>{
@@ -49,7 +53,7 @@ function App() {
     test={test} 
     setStage={(stage)=>setStage(stage)}
     setLogin={(login=>checkArray(login))}/> :
-  stage ==='2' ? <Choice
+  stage ==='2' && login ? <Choice
     user={login}
     userPic={loginPic}
     data={data}
@@ -60,19 +64,36 @@ function App() {
         return i.name === choice ? setChoicePic(i.url):null
       })
     }}/> :
-  stage ==='3' ? <Questions
+  stage ==='3' && login ? <Questions
+    setStage={(stage)=>setStage(stage)}
     user={login}
     userPic={loginPic}
     choice={choice}
     choicePic={choicePic}
     /> :
+  stage ==='4' && login ? <Results
+    user={login}
+    userPic={loginPic}
+    /> :
   null ;
+  function loginButton(){
+    if(login){
+      setLogin(null)
+      setStage('0')
+      setData(directorsData)
+    } else{
+      setStage('1')
+    }
+  }
   return (
     <div className="App">
       <header className="App-header">
         <div className='header'>
           <div className="App-logo"><img src='https://i.imgur.com/gQC4wPM.png'  alt="logo" /></div>
-          {login ? <div className='login-icon'><img src={loginPic}  alt='icon'/></div> : <div onClick={()=>setStage('1')} className='login'>Login</div>}
+          <div className='loginFrame'>
+            {login ? <div onClick={()=>setStage('4')} className='login-icon'><img src={loginPic}  alt='icon'/></div> : null}
+            <div onClick={()=>loginButton()} className='login'>{login ? 'Sair' : 'Entrar'}</div>
+          </div>
         </div>
         <div className='title'>Sistema de Feedback Interno</div>
         {component}

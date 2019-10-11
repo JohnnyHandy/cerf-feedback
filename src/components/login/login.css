@@ -1,7 +1,7 @@
 .login-container{
     width:305px;
-    height:340px;
-    margin-top:25px;
+    height:360px;
+    margin-top:5px;
     background-color:white;
 
 }
@@ -13,13 +13,29 @@
     font-size:20px
 }
 
+
 .login-container .title2{
     font-family:'Montserrat', 'sans-serif';
     color:#172F64;
     font-size:20px;
     margin-top:10px;
     margin-bottom:20px;
+    position:relative;
+    display:flex;
+    height:30px;
 }
+
+.login-container .title2 .loginTitle{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login-container .title2 .arrow{
+    position:absolute;
+    left:5px
+}
+
 
  .flex-container1{
     display:flex;

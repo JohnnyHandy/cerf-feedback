@@ -19,6 +19,7 @@ const choice = (props)=>{
         <div className='choice-container'>
             <div className='flexbox-container'>
                 <div className='img'><img src={props.userPic} alt={props.user}/></div>
+                <div className='arrow'><img src='https://i.imgur.com/Wj8GhmI.png' alt='back'/></div>
             </div>
             <div className='title'>
                 {props.user}, seja bem vindo ao feedback entre os diretores! 
