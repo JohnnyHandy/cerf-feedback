@@ -41,10 +41,12 @@ function App() {
       }))
   }
   const component = 
-  stage === '0' ? <Landing 
+  stage === '0' ? <Landing
+    login ={login} 
     setStage={(stage)=>setStage(stage)} 
     setTest={(test)=>setTest(test)}/> :
-  stage ==='1' ? <Login 
+  stage ==='1' && !login ? <Login
+    test={test} 
     setStage={(stage)=>setStage(stage)}
     setLogin={(login=>checkArray(login))}/> :
   stage ==='2' ? <Choice
@@ -68,7 +70,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src='https://i.imgur.com/gQC4wPM.png' className="App-logo" alt="logo" />
+        <div className='header'>
+          <div className="App-logo"><img src='https://i.imgur.com/gQC4wPM.png'  alt="logo" /></div>
+          {login ? <div className='login-icon'><img src={loginPic}  alt='icon'/></div> : <div onClick={()=>setStage('1')} className='login'>Login</div>}
+        </div>
         <div className='title'>Sistema de Feedback Interno</div>
         {component}
       </header>

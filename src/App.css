@@ -3,7 +3,8 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  position:absolute;
+  left:0;
 }
 
 .App-header {
@@ -23,6 +24,28 @@
 }
 
 
-.App-link {
-  color: #09d3ac;
+.App-header .header{
+  height:150px;
+  width:100%;
+  display:flex;
+  position:relative;
+  justify-content: center;
+   align-items: center;
+}
+
+.header .login{
+  position:absolute;
+  right:0;
+  color:#172F64;
+  background-color: white;
+  padding:10px;
+  font-family: 'Montserrat','sans-serif';
+  margin-right:35px;
+  font-weight: bold;
+}
+
+.header .login-icon{
+  position:absolute;
+  right:0;
+  margin-right:35px
 }
