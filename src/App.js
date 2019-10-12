@@ -92,7 +92,7 @@ function App() {
           <div className="App-logo"><img src='https://i.imgur.com/gQC4wPM.png'  alt="logo" /></div>
           <div className='loginFrame'>
             {login ? <div onClick={()=>setStage('4')} className='login-icon'><img src={loginPic}  alt='icon'/></div> : null}
-            <div onClick={()=>loginButton()} className='login'>{login ? 'Sair' : 'Entrar'}</div>
+            <button onClick={()=>loginButton()} className='login'>{login ? 'Sair' : 'Entrar'}</button>
           </div>
         </div>
         <div className='title'>Sistema de Feedback Interno</div>
