@@ -1,7 +1,7 @@
 .results-container{
     width:305px;
-    height:340px;
-    margin-top:25px;
+    height:370px;
+    margin-top:10px;
     display:flex;
     flex-direction: column;
     background-color:white;
@@ -10,7 +10,6 @@
 }
 
 .flexbox-container{
-    margin-top:10px;
     display:flex;
     position:relative;
     width:100%;
@@ -46,12 +45,19 @@
     margin:0 20px;
 }
 
+.flexbox-container-2 .result .collapse h1,p{
+    font:'Montserrat','sans-serif';
+    color:#172F64
+}
+
 
 
 .flexbox-container-2 .result .criteria{
     font-family: 'Montserrat','sans-serif';
     font-size:17px;
-    color:#172F64
+    color:#172F64;
+    font-weight: bold;
+    border:0.5px solid #172F64
 }
 
 .results-container .update{

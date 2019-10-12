@@ -11,9 +11,10 @@ const Questions = (props)=>{
     const [results,setResults]=useState(initialObject)
     const [question,setQuestion]=useState(0)
     async function setResult(grade,comment){
-        console.log('[setResult]',grade)
-        const copy = question === 0 ? {...results,lideranca:grade,lidComment:comment} : question === 1 ? {...results,comunicacao:grade,comuComment:comment} : question === 2 ? {...results,adaptabilidade:grade,adaptComment:comment} :null
-        console.log(copy)
+        const copy = question === 0 ? {...results,lideranca:grade,lidComment:comment} 
+        : question === 1 ? {...results,comunicacao:grade,comuComment:comment} 
+        : question === 2 ? {...results,adaptabilidade:grade,adaptComment:comment} 
+        :null
         await setResults(copy)
         await setComment('')
         await setSelected(null)
@@ -39,7 +40,6 @@ const Questions = (props)=>{
     function postRequest(){
         setQuestion(question+1)
         axios.post('/results/'+props.choice+'.json',results).then(response=>{
-            console.log(response)
         }).catch(error=>{
             console.log(error)
         })

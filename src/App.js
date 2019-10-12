@@ -72,6 +72,7 @@ function App() {
     choicePic={choicePic}
     /> :
   stage ==='4' && login ? <Results
+    setStage={(stage)=>setStage(stage)}
     user={login}
     userPic={loginPic}
     /> :
