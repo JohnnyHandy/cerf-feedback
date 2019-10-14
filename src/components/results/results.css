@@ -1,6 +1,6 @@
 .results-container{
     width:305px;
-    height:400px;
+    height:100%;
     margin-top:10px;
     display:flex;
     flex-direction: column;

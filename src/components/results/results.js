@@ -76,7 +76,7 @@ const Results = (props)=>{
            <div className='flexbox-container-2'>
            {comuCollapse || adaptCollapse ? null : 
            <div className='result'>
-                    <div onClick={()=>setLidCollapse(!lidCollapse)} className='criteria'>Liderança <img src={lidCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
+                    <div onClick={()=>setLidCollapse(!lidCollapse)} className='criteria'>Liderança <img src={lidCollapse?'https://i.imgur.com/NT8slih.png':'https://i.imgur.com/SJZhLOg.png'} alt='collapse'/></div>
                     <Collapse isOpen={lidCollapse}>
                     {lideranca ? <Progress color={lideranca < 2 ? 'danger': (lideranca > 2 && lideranca) < 3.5 ? 'warning' : lideranca > 3.5 ? 'success':null } animated value={lideranca} max={5}/>:null}
                         <h5>{lidComment.length ? 'Comentários':'Não há comentários no momento!'}</h5>
@@ -85,7 +85,7 @@ const Results = (props)=>{
             </div>}
             { lidCollapse || adaptCollapse ? null: 
             <div className='result'>
-                    <div onClick={()=>setComuCollapse(!comuCollapse)} className='criteria'>Comunicação <img src={comuCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
+                    <div onClick={()=>setComuCollapse(!comuCollapse)} className='criteria'>Comunicação <img src={comuCollapse?'https://i.imgur.com/NT8slih.png':'https://i.imgur.com/SJZhLOg.png'} alt='collapse'/></div>
                     <Collapse isOpen={comuCollapse}>
                     {comunicacao ? <Progress animated color={comunicacao < 2 ? 'danger': (comunicacao > 2 && comunicacao) < 3.5 ? 'warning' : 'success' } value={comunicacao}  max={5}/>:null}
                         <h5>{comuComment.length?'Comentários':'Não há comentários no momento!'}</h5>
@@ -95,7 +95,7 @@ const Results = (props)=>{
         }
            { lidCollapse || comuCollapse ? null : 
            <div className='result'>
-                    <div onClick={()=>setAdaptCollapse(!adaptCollapse)} className='criteria'>Adaptabilidade <img src={adaptCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
+                    <div onClick={()=>setAdaptCollapse(!adaptCollapse)} className='criteria'>Adaptabilidade <img src={adaptCollapse?'https://i.imgur.com/NT8slih.png':'https://i.imgur.com/SJZhLOg.png'} alt='collapse'/></div>
                     <Collapse isOpen={adaptCollapse}>
                     {adaptabilidade ? <Progress animated color={adaptabilidade < 2 ? 'danger': adaptabilidade > 2 && adaptabilidade < 3.5 ? 'warning' : 'success' } value={adaptabilidade}  max={5}/>:null}
 
