@@ -63,7 +63,8 @@ const Results = (props)=>{
         return (
             <p key={index}>{i}</p>
         )
-    }) 
+    })
+    console.log('liderança: '+lideranca,'comunicação: '+comunicacao,'adaptabilidade: '+adaptabilidade) 
     return(
         <div className='results-container'>
             <div className='flexbox-container'>
@@ -75,29 +76,30 @@ const Results = (props)=>{
            <div className='flexbox-container-2'>
            {comuCollapse || adaptCollapse ? null : 
            <div className='result'>
-                    <div onClick={()=>setLidCollapse(!lidCollapse)} className='criteria'>Liderança <img src={lidCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/dbDRHBD.png'} alt='collapse'/></div>
-                    <Progress color={lideranca < 2 ? 'danger': lideranca > 2 && lideranca < 3.5 ? 'warning' : 'success' } animated value={lideranca} max={5}/>
+                    <div onClick={()=>setLidCollapse(!lidCollapse)} className='criteria'>Liderança <img src={lidCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
                     <Collapse isOpen={lidCollapse}>
-                        <h5>Comentários</h5>
+                    {lideranca ? <Progress color={lideranca < 2 ? 'danger': (lideranca > 2 && lideranca) < 3.5 ? 'warning' : lideranca > 3.5 ? 'success':null } animated value={lideranca} max={5}/>:null}
+                        <h5>{lidComment.length ? 'Comentários':'Não há comentários no momento!'}</h5>
                         {lidCommentElement}
                     </Collapse>
             </div>}
             { lidCollapse || adaptCollapse ? null: 
             <div className='result'>
-                    <div onClick={()=>setComuCollapse(!comuCollapse)} className='criteria'>Comunicação <img src={comuCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/dbDRHBD.png'} alt='collapse'/></div>
-                    <Progress animated color={comunicacao < 2 ? 'danger': comunicacao > 2 && comunicacao < 3.5 ? 'warning' : 'success' } value={comunicacao} max={5}/>
+                    <div onClick={()=>setComuCollapse(!comuCollapse)} className='criteria'>Comunicação <img src={comuCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
                     <Collapse isOpen={comuCollapse}>
-                        <h5>Comentários</h5>
+                    {comunicacao ? <Progress animated color={comunicacao < 2 ? 'danger': (comunicacao > 2 && comunicacao) < 3.5 ? 'warning' : 'success' } value={comunicacao}  max={5}/>:null}
+                        <h5>{comuComment.length?'Comentários':'Não há comentários no momento!'}</h5>
                         {comuCommentElement}
                     </Collapse>
             </div>
         }
            { lidCollapse || comuCollapse ? null : 
            <div className='result'>
-                    <div onClick={()=>setAdaptCollapse(!adaptCollapse)} className='criteria'>Adaptabilidade <img src={adaptCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/dbDRHBD.png'} alt='collapse'/></div>
-                    <Progress animated color={adaptabilidade < 2 ? 'danger': adaptabilidade > 2 && adaptabilidade < 3.5 ? 'warning' : 'success' } value={adaptabilidade} max={5}/>
+                    <div onClick={()=>setAdaptCollapse(!adaptCollapse)} className='criteria'>Adaptabilidade <img src={adaptCollapse?'https://i.imgur.com/a3M7KMW.png':'https://i.imgur.com/Zc1CjZY.png'} alt='collapse'/></div>
                     <Collapse isOpen={adaptCollapse}>
-                        <h5>Comentários</h5>
+                    {adaptabilidade ? <Progress animated color={adaptabilidade < 2 ? 'danger': adaptabilidade > 2 && adaptabilidade < 3.5 ? 'warning' : 'success' } value={adaptabilidade}  max={5}/>:null}
+
+                        <h5>{adaptComment.length ? 'Comentários':'Não há comentários no momento!'}</h5>
                         {adaptCommentElement}
                     </Collapse>
              </div>

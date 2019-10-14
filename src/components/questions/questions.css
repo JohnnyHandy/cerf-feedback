@@ -1,6 +1,6 @@
 .questions-container{
     width:305px;
-    height:370px;
+    height:400px;
     margin-top:25px;
     background-color:white;
 }
@@ -258,9 +258,9 @@
 }
 
 .questions-container .conclusion .restart,.send,.back{
-    margin-bottom:5px;
+    margin-bottom:10px;
     font-family:'Montserrat','sans-serif';
     background-color:#172F64;
     color:white;
-    width:120px;
+    width:180px;
 } 

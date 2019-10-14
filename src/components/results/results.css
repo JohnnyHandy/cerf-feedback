@@ -1,6 +1,6 @@
 .results-container{
     width:305px;
-    height:370px;
+    height:400px;
     margin-top:10px;
     display:flex;
     flex-direction: column;
@@ -39,13 +39,22 @@
 }
 
 .flexbox-container-2 .result{
-    width:100%
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:5px 0px;
 }
 .flexbox-container-2 .result .progress{
     margin:0 20px;
 }
 
-.flexbox-container-2 .result .collapse h1,p{
+.flexbox-container-2 .result .collapse,.show{
+    width:inherit
+}
+
+.flexbox-container-2 .result .collapse h5,p{
     font:'Montserrat','sans-serif';
     color:#172F64
 }
@@ -57,7 +66,6 @@
     font-size:17px;
     color:#172F64;
     font-weight: bold;
-    border:0.5px solid #172F64
 }
 
 .results-container .update{
@@ -66,5 +74,5 @@
     padding:3px;
     font-size:15px;
     font-family: 'Montserrat','sans-serif';
-
+    margin-bottom:5px;
 }

@@ -11,7 +11,7 @@ const landing = (props)=>{
         <button onClick={()=>handle(props.login ? '2':'1','0')} className='option1'>
           Feedback entre os diretores
         </button>
-        <button onClick={()=>handle(props.login ? '2':'1','1')} className='option2'>
+        <button disabled onClick={()=>handle(props.login ? '2':'1','1')} className='option2'>
           Feedback360
         </button>
     </div>

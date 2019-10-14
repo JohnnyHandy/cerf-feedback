@@ -86,8 +86,8 @@ const Questions = (props)=>{
                     <div>
                         {props.user}, obrigado por dar seu feedback a {props.choice}! <br/> Deseja dar seu feedback a outro diretor?
                     </div>  
-                    <div className='continue' onClick={()=>props.setStage('2')}>Sim</div>
-                    <div className='continue' onClick={()=>props.setStage('0')}>Não</div>
+                    <button className='continue' onClick={()=>props.setStage('2')}>Sim</button>
+                    <button className='continue' onClick={()=>props.setStage('0')}>Não</button>
                     
               
                 </div>
